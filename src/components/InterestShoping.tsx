@@ -1,11 +1,10 @@
-import { HStack, Button, Badge, Avatar, Tag, TagLabel } from "@chakra-ui/react";
+import { Badge, Button, HStack } from "@chakra-ui/react";
 import { FaRegHeart } from "react-icons/fa";
-import { redirect } from "react-router-dom";
 
 const InterestShoping = () => {
   return (
     <HStack>
-      <Button variant="ghost">
+      <Button variant="ghost" size="sm">
         <FaRegHeart size="xs" />
         <Badge variant="subtle">4</Badge>
       </Button>
