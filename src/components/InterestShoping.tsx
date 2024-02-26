@@ -1,11 +1,11 @@
-import { Badge, Button, HStack } from "@chakra-ui/react";
+import { Badge, Button, HStack, Icon } from "@chakra-ui/react";
 import { FaRegHeart } from "react-icons/fa";
 
 const InterestShoping = () => {
   return (
     <HStack>
       <Button variant="ghost" size="sm">
-        <FaRegHeart size="xs" />
+        <Icon as={FaRegHeart} boxSize={8} />
         <Badge variant="subtle">4</Badge>
       </Button>
     </HStack>
