@@ -1,11 +1,11 @@
-import { Grid, GridItem, HStack } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 import PreviewCards from "./PreviewCards";
-import photo1 from "../assets/1.webp";
+// import photo1 from "../assets/1.webp";
 import photo2 from "../assets/2.webp";
 import photo3 from "../assets/3.webp";
 import photo4 from "../assets/4.webp";
-import photo5 from "../assets/5.webp";
-import photo6 from "../assets/6.webp";
+// import photo5 from "../assets/5.webp";
+// import photo6 from "../assets/6.webp";
 import photo7 from "../assets/7.webp";
 import photo8 from "../assets/8.webp";
 import photo9 from "../assets/9.webp";
@@ -15,28 +15,34 @@ interface Props {
 const PreviewCardContiner = ({ bg }: Props) => {
   return (
     <Grid
-      h="800px"
+      // h="800px"
       // w="100%"
-      templateRows="repeat(4, 1fr)"
-      templateColumns="repeat(4, 1fr)"
-      gap={2}
+      templateRows={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
+      templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(4, 1fr)" }}
+      gap={3}
     >
-      <GridItem rowSpan={1} colSpan={1} boxSize="fit-content" bg={bg}>
-        <PreviewCards imgsrc={photo7} w="500px" maxH="200px" />
-        <PreviewCards imgsrc={photo8} w="400px" h="600px" mt={2} />
+      <GridItem rowSpan={1} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo7} w="406px" h="261px" />
       </GridItem>
 
-      <GridItem rowSpan={1} colSpan={2} ml={3} bg={bg}>
-        <PreviewCards imgsrc={photo9} h="450px" w="800px" />
-        <HStack>
-          <PreviewCards imgsrc={photo4} w="400px" h="350px" mt={4} />
-          <PreviewCards imgsrc={photo3} w="400px" h="350px" mt={4} />
-        </HStack>
+      <GridItem rowSpan={2} colSpan={2} bg={bg}>
+        <PreviewCards imgsrc={photo9} w="820px" h="521px" />
       </GridItem>
 
-      <GridItem rowSpan={1} colSpan={1} ml={2} bg={bg}>
-        <PreviewCards imgsrc={photo8} w="400px" h="600px" />
-        <PreviewCards imgsrc={photo2} maxH="200px" w="500px" mt={2} />
+      <GridItem rowSpan={1} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo2} w="406px" h="262px" />
+      </GridItem>
+      <GridItem rowSpan={2} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo8} w="406px" h="528px" />
+      </GridItem>
+      <GridItem rowSpan={2} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo8} w="406px" h="528px" />
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo4} w="406px" h="260px" />
+      </GridItem>
+      <GridItem rowSpan={1} colSpan={1} bg={bg}>
+        <PreviewCards imgsrc={photo3} w="406px" h="260px" />
       </GridItem>
     </Grid>
   );

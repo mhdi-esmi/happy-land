@@ -1,4 +1,4 @@
-import { Box, Card, CardBody, HStack, Image } from "@chakra-ui/react";
+import { Box, Card, Image } from "@chakra-ui/react";
 
 interface Props {
   imgsrc: string;
@@ -12,7 +12,7 @@ interface Props {
 const PreviewCards = ({ imgsrc, w, h, maxH, maxW, mt }: Props) => {
   return (
     <Box
-      // width="fit-content"
+      width="fit-content"
       borderRadius={20}
       overflow="hidden"
       // justifyContent="space-between"
